@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>清羽 · 开源作品 / QingYu Open Source</title>
+  <meta name="description" content="清羽（QingYu）是 LiuShen 发起的独立开源软件品牌，做有用、优雅、可以自己部署的软件。五个项目：盘搜、相册、评论、代码片段与单点登录。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="清羽 · 开源作品 / QingYu Open Source">
+  <meta property="og:description" content="有用，优雅，且可以自己拥有。清羽的五个自托管项目。">
+  <meta property="og:url" content="https://qingyu-org.github.io/.github/">
+  <meta property="og:image" content="https://qingyu-org.github.io/.github/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://qingyu-org.github.io/.github/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css?v=20261123e">
+  <script>
+    (function () {
+      var key = 'qingyu-theme';
+      var saved = null;
+      try {
+        saved = localStorage.getItem(key);
+        if (saved !== 'light' && saved !== 'dark') saved = null;
+      } catch (e) {}
+      var prefersDark = window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+    }());
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QingYu",
+    "alternateName": "清羽",
+    "url": "https://github.com/qingyu-org",
+    "description": "独立开源软件品牌，做有用、优雅、可以自己部署的软件。"
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="清羽 QingYu 首页">
+      <svg class="brand-mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="brandGradient" x1="4" y1="3" x2="28" y2="29" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#818cf8"/>
+            <stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+        <rect width="32" height="32" rx="9" fill="url(#brandGradient)"/>
+        <path d="M24 7.5c-6.4 1.2-10.6 5-11.7 11.2-.4 2.4.2 4.3 1.5 5.6.7-3.8 2.1-6.8 4.7-9.3 1.9-1.8 3.5-2.9 5.5-3.7-1.6 1.2-2.8 2.3-4.1 4.1-2.1 2.8-3.1 5.6-3.6 8.9" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-word">清羽</span>
+      <span class="brand-latin" lang="en">QINGYU</span>
+    </a>
+
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#projects">项目</a>
+      <a href="#principles">做法</a>
+      <a href="#about">关于</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-link" href="https://github.com/qingyu-org" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 查看清羽组织（新窗口打开）">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+        </svg>
+      </a>
+      <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="深色模式" data-theme-toggle>
+        <svg class="theme-icon theme-icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/>
+        </svg>
+        <svg class="theme-icon theme-icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.6 14.2A8.4 8.4 0 0 1 9.8 3.4 8.5 8.5 0 1 0 20.6 14.2Z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="tide" width="1440" height="360" aria-hidden="true" data-tide></canvas>
+
+      <aside class="hero-rail" aria-hidden="true">
+        <span>OPEN SOURCE</span>
+        <span class="rail-rule"></span>
+        <span>清羽 · 二〇二六</span>
+      </aside>
+
+      <div class="hero-inner">
+        <p class="hero-kicker enter" style="--delay:.05s">开源 · 自托管 · 慢慢打磨</p>
+
+        <div class="hero-title-row">
+          <h1 class="hero-title enter" id="hero-title" style="--delay:.12s">清羽</h1>
+          <span class="seal enter" style="--delay:.42s" aria-hidden="true">开源</span>
+        </div>
+        <p class="hero-latin enter" lang="en" style="--delay:.2s">QINGYU</p>
+
+        <p class="hero-lede enter" style="--delay:.3s">有用，优雅，<br>且可以自己拥有。</p>
+        <p class="hero-copy enter" style="--delay:.38s">
+          清羽是 LiuShen 发起的独立开源软件品牌。身份、评论、片段、照片与搜索，
+          五件工具，都可以部署在自己的机器上。
+        </p>
+
+        <div class="hero-actions enter" style="--delay:.46s">
+          <a class="button button--solid" href="#projects">浏览项目</a>
+          <a class="button button--quiet" href="https://github.com/qingyu-org" target="_blank" rel="noopener noreferrer">
+            在 GitHub 查看<span class="sr-only">（新窗口打开）</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-foot enter" style="--delay:.54s">
+        <ul class="factline">
+          <li><strong>05</strong><span>个项目</span></li>
+          <li><strong>04</strong><span>个在线演示</span></li>
+          <li><strong>100%</strong><span>可以自托管</span></li>
+        </ul>
+        <a class="scroll-cue" href="#projects" aria-label="向下浏览项目">
+          <span>向下</span>
+          <svg width="14" height="18" viewBox="0 0 14 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 2v13M2.5 10.5 7 15l4.5-4.5"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <header class="section-head reveal">
+        <p class="section-kicker">作品</p>
+        <h2 id="projects-title">五件趁手的工具。</h2>
+        <p class="section-intro">
+          都在真实使用中长大。每一件都可以拉到自己的服务器上，
+          交给日常，而不是交给别人。
+        </p>
+      </header>
+
+      <div class="project-list">
+        <article class="project">
+          <div class="project-glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="23" cy="21" r="11" pathLength="1"/>
+              <path d="M31 29.5 40 38.5" pathLength="1"/>
+              <path d="M16.5 23.5c2.6-3.4 4.3 1.6 6.7-1.4s4.2 1.6 6.4-.9" pathLength="1"/>
+              <circle cx="23" cy="21" r="1.2" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-titleline">
+              <h3><a href="https://github.com/qingyu-org/Pansou" target="_blank" rel="noopener noreferrer">清羽盘搜<span class="sr-only">（新窗口打开）</span></a></h3>
+              <span class="project-latin" lang="en">Pansou</span>
+            </div>
+            <p class="project-desc">可以自己运营的网盘搜索站。搜索聚合、配额、审计与上游同步，都收在同一个仓库里。</p>
+            <p class="project-stack">Go, Vue 3, SQLite</p>
+          </div>
+          <div class="project-aside">
+            <span class="project-domain">搜索</span>
+            <p class="project-links">
+              <a href="https://so.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <a href="https://github.com/qingyu-org/Pansou" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="7" y="10" width="34" height="27" rx="3.5" pathLength="1"/>
+              <circle cx="17" cy="19" r="2.6" pathLength="1"/>
+              <path d="M8.5 33.5 18 24l6.5 6.5 4.5-4.5 10.5 10" pathLength="1"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-titleline">
+              <h3><a href="https://github.com/qingyu-org/Album" target="_blank" rel="noopener noreferrer">清羽相册<span class="sr-only">（新窗口打开）</span></a></h3>
+              <span class="project-latin" lang="en">Memora</span>
+            </div>
+            <p class="project-desc">把照片放回自己的硬盘。瀑布流、相册与地图，都由你部署，也由你保管。</p>
+            <p class="project-stack">Go, Nuxt, SQLite</p>
+          </div>
+          <div class="project-aside">
+            <span class="project-domain">相册</span>
+            <p class="project-links">
+              <a href="https://xc.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <a href="https://github.com/qingyu-org/Album" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12.5a3 3 0 0 1 3-3h20a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H17l-6 5v-5H12a3 3 0 0 1-3-3Z" pathLength="1"/>
+              <path d="M22 28v-1.5a3 3 0 0 1 3-3h13a3 3 0 0 0 3-3v-6" pathLength="1" opacity=".55"/>
+              <circle cx="17" cy="18" r="1.1" fill="currentColor" stroke="none"/>
+              <circle cx="23" cy="18" r="1.1" fill="currentColor" stroke="none"/>
+              <circle cx="29" cy="18" r="1.1" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-titleline">
+              <h3><a href="https://github.com/qingyu-org/Commits" target="_blank" rel="noopener noreferrer">清羽评论<span class="sr-only">（新窗口打开）</span></a></h3>
+              <span class="project-latin" lang="en">Commits</span>
+            </div>
+            <p class="project-desc">Artalk 的自维护分支。为博客准备一套跟得上自己节奏的评论系统，管理台与部署方式完整保留。</p>
+            <p class="project-stack">Go, JavaScript, Docker</p>
+          </div>
+          <div class="project-aside">
+            <span class="project-domain">评论</span>
+            <p class="project-links">
+              <a href="https://github.com/qingyu-org/Commits" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 8h14l8 8v24H13Z" pathLength="1"/>
+              <path d="M27 8v8h8" pathLength="1"/>
+              <path d="m22 25-4 5 4 5M28 25l4 5-4 5" pathLength="1"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-titleline">
+              <h3><a href="https://github.com/qingyu-org/Gist" target="_blank" rel="noopener noreferrer">清羽片段<span class="sr-only">（新窗口打开）</span></a></h3>
+              <span class="project-latin" lang="en">Gist</span>
+            </div>
+            <p class="project-desc">每个片段都是一个 Git 仓库。浏览器里随手写，也可以 clone 下来，用惯用的编辑器继续改。</p>
+            <p class="project-stack">Go, Git, SQLite</p>
+          </div>
+          <div class="project-aside">
+            <span class="project-domain">片段</span>
+            <p class="project-links">
+              <a href="https://gist.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <a href="https://github.com/qingyu-org/Gist" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 7.5 37 12v10.2c0 8.9-5.6 14.8-13 18.3-7.4-3.5-13-9.4-13-18.3V12Z" pathLength="1"/>
+              <circle cx="24" cy="21" r="3.6" pathLength="1"/>
+              <path d="M24 24.6v6.2" pathLength="1"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-titleline">
+              <h3><a href="https://auth.liushen.fun" target="_blank" rel="noopener noreferrer">清羽通行证<span class="sr-only">（新窗口打开）</span></a></h3>
+              <span class="project-latin" lang="en">Auth</span>
+            </div>
+            <p class="project-desc">单站点部署的 OAuth 2.0 / OIDC 单点登录。账户、设备、应用与权限，收在一处。</p>
+            <p class="project-stack">Go, MySQL, OIDC</p>
+          </div>
+          <div class="project-aside">
+            <span class="project-domain">身份</span>
+            <p class="project-links">
+              <a href="https://auth.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <p class="section-foot reveal">
+        <a class="text-link" href="https://github.com/qingyu-org?tab=repositories" target="_blank" rel="noopener noreferrer">
+          全部仓库与发布记录<span class="sr-only">（新窗口打开）</span>
+        </a>
+      </p>
+    </section>
+
+    <section class="section principles" id="principles" aria-labelledby="principles-title">
+      <div class="principles-inner">
+        <header class="section-head reveal">
+          <p class="section-kicker">做法</p>
+          <h2 id="principles-title">先让它能被拿走。</h2>
+          <p class="section-intro">
+            这三点决定了每个项目的边界：能自己跑，能看懂，也能体面地离开。
+          </p>
+        </header>
+
+        <div class="principle-grid">
+          <div class="principle reveal">
+            <svg class="principle-mark" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3.5" y="4.5" width="17" height="6.5" rx="1.6"/>
+              <rect x="3.5" y="13" width="17" height="6.5" rx="1.6"/>
+              <path d="M7 7.8h.01M7 16.2h.01"/>
+            </svg>
+            <h3>自托管</h3>
+            <p>默认把数据和服务放在自己的机器上。部署是一份能力，不是一份许可。</p>
+          </div>
+          <div class="principle reveal" style="--reveal-delay:.08s">
+            <svg class="principle-mark" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 20c2.2-3.6 5.6-6.3 10-8"/>
+              <path d="M14.5 5.5c2.4-2.4 4.8-2 5 .2.2 2.2-2.7 4.6-6 5.3-2.5.5-4.3-.3-4.3-.3s.4-1.9 2.1-3.6Z"/>
+              <path d="M12.2 12.3 9.8 9.9"/>
+            </svg>
+            <h3>克制</h3>
+            <p>只做日常真正会用到的部分，把剩下的空间留给内容与呼吸。</p>
+          </div>
+          <div class="principle reveal" style="--reveal-delay:.16s">
+            <svg class="principle-mark" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14.5 3.5h4a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 1-1.5 1.5h-4"/>
+              <path d="M10 16.5 15.5 12 10 7.5M15 12H3.5"/>
+            </svg>
+            <h3>可离开</h3>
+            <p>格式开放，导出完整。喜欢就留下，不喜欢可以随时带走。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="about-inner">
+        <div class="about-main reveal">
+          <p class="about-seal" aria-hidden="true">清羽</p>
+          <h2 id="about-title">QingYu<span class="about-alt">（清羽 / 清羽飞扬）</span></h2>
+          <p class="about-copy">
+            一个由 LiuShen 发起的独立开源软件品牌。我们相信好工具应该安静、耐用，
+            并且最终属于使用它的人。
+          </p>
+        </div>
+        <div class="about-links reveal" style="--reveal-delay:.08s">
+          <a class="text-link" href="https://github.com/qingyu-org" target="_blank" rel="noopener noreferrer">
+            github.com/qingyu-org<span class="sr-only">（新窗口打开）</span>
+          </a>
+          <a class="text-link" href="https://github.com/qingyu-org/.github/blob/main/profile/README.md" target="_blank" rel="noopener noreferrer">
+            组织说明<span class="sr-only">（新窗口打开）</span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <p>© 2026 清羽。各项目遵循其仓库内的许可证。</p>
+        <nav class="footer-nav" aria-label="页脚导航">
+          <a href="#projects">项目</a>
+          <a href="#principles">做法</a>
+          <a href="#about">关于</a>
+        </nav>
+        <p class="footer-note">纯 HTML、CSS 与 JavaScript，无第三方依赖。</p>
+        <a class="text-link back-top" href="#top">回到顶部</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/app.js?v=20261123e" defer></script>
+</body>
+</html>
