@@ -368,30 +368,6 @@ svg {
   opacity: 0.95;
 }
 
-.hero-rail {
-  position: absolute;
-  top: 50%;
-  right: max(12px, calc((100vw - var(--measure)) / 2 - 44px));
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
-  color: var(--ink-faint);
-  pointer-events: none;
-}
-
-.rail-rule {
-  width: 1px;
-  height: 64px;
-  background: linear-gradient(to bottom, transparent, var(--line), transparent);
-}
-
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -444,9 +420,9 @@ svg {
   background: var(--seal);
   color: var(--seal-ink);
   font-family: var(--serif);
-  font-size: clamp(0.8rem, 1.05vw, 1rem);
-  letter-spacing: 0.1em;
-  line-height: 1.15;
+  font-size: clamp(0.7rem, 0.92vw, 0.84rem);
+  letter-spacing: 0.04em;
+  line-height: 1.25;
   writing-mode: vertical-rl;
   border-radius: 5px;
   box-shadow:
@@ -876,6 +852,12 @@ svg {
   transform-origin: left;
 }
 
+.project-note {
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+}
+
 /* ---------------- principles ---------------- */
 
 .principles {
@@ -1082,12 +1064,6 @@ svg {
 
 /* ---------------- responsive ---------------- */
 
-@media (max-width: 1120px) {
-  .hero-rail {
-    display: none;
-  }
-}
-
 @media (max-width: 860px) {
   .project {
     grid-template-columns: 60px minmax(0, 1fr);
@@ -1225,6 +1201,7 @@ svg {
 
   .seal {
     width: 46px;
+    font-size: 0.64rem;
   }
 
   .hero-actions {
@@ -1292,7 +1269,6 @@ svg {
 @media print {
   .site-header,
   .tide,
-  .hero-rail,
   .hero-actions,
   .scroll-cue {
     display: none !important;

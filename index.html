@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>清羽 · 开源作品 / QingYu Open Source</title>
-  <meta name="description" content="清羽（QingYu）是 LiuShen 发起的独立开源软件品牌，做有用、优雅、可以自己部署的软件。五个项目：盘搜、相册、评论、代码片段与单点登录。">
+  <title>清羽 · 项目 / QingYu</title>
+  <meta name="description" content="清羽（QingYu）是 LiuShen 发起的软件项目集合，做可以自己部署的工具：网盘搜索、相册、评论、代码片段和单点登录。项目会继续增加。">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="清羽 · 开源作品 / QingYu Open Source">
-  <meta property="og:description" content="有用，优雅，且可以自己拥有。清羽的五个自托管项目。">
+  <meta property="og:title" content="清羽 · 项目 / QingYu">
+  <meta property="og:description" content="能自己部署的工具。代码在 GitHub，在线入口可以直接打开。">
   <meta property="og:url" content="https://qingyu-org.github.io/.github/">
   <meta property="og:image" content="https://qingyu-org.github.io/.github/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://qingyu-org.github.io/.github/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=20261123e">
+  <link rel="stylesheet" href="assets/style.css?v=20261124a">
   <script>
     (function () {
       var key = 'qingyu-theme';
@@ -37,7 +37,7 @@
     "name": "QingYu",
     "alternateName": "清羽",
     "url": "https://github.com/qingyu-org",
-    "description": "独立开源软件品牌，做有用、优雅、可以自己部署的软件。"
+    "description": "独立软件项目，主要做可以自己部署的工具。"
   }
   </script>
 </head>
@@ -62,7 +62,7 @@
 
     <nav class="site-nav" aria-label="主导航">
       <a href="#projects">项目</a>
-      <a href="#principles">做法</a>
+      <a href="#principles">原则</a>
       <a href="#about">关于</a>
     </nav>
 
@@ -88,40 +88,34 @@
     <section class="hero" aria-labelledby="hero-title">
       <canvas class="tide" width="1440" height="360" aria-hidden="true" data-tide></canvas>
 
-      <aside class="hero-rail" aria-hidden="true">
-        <span>OPEN SOURCE</span>
-        <span class="rail-rule"></span>
-        <span>清羽 · 二〇二六</span>
-      </aside>
-
       <div class="hero-inner">
-        <p class="hero-kicker enter" style="--delay:.05s">开源 · 自托管 · 慢慢打磨</p>
+        <p class="hero-kicker enter" style="--delay:.05s">自托管工具 · 持续更新</p>
 
         <div class="hero-title-row">
           <h1 class="hero-title enter" id="hero-title" style="--delay:.12s">清羽</h1>
-          <span class="seal enter" style="--delay:.42s" aria-hidden="true">开源</span>
+          <span class="seal enter" style="--delay:.42s" aria-hidden="true">自托管</span>
         </div>
         <p class="hero-latin enter" lang="en" style="--delay:.2s">QINGYU</p>
 
-        <p class="hero-lede enter" style="--delay:.3s">有用，优雅，<br>且可以自己拥有。</p>
+        <p class="hero-lede enter" style="--delay:.3s">自己部署，<br>数据留在自己手里。</p>
         <p class="hero-copy enter" style="--delay:.38s">
-          清羽是 LiuShen 发起的独立开源软件品牌。身份、评论、片段、照片与搜索，
-          五件工具，都可以部署在自己的机器上。
+          清羽是 LiuShen 维护的一组自托管项目。现在有网盘搜索、相册、评论、
+          代码片段和单点登录，之后还会继续加。
         </p>
 
         <div class="hero-actions enter" style="--delay:.46s">
-          <a class="button button--solid" href="#projects">浏览项目</a>
+          <a class="button button--solid" href="#projects">查看项目</a>
           <a class="button button--quiet" href="https://github.com/qingyu-org" target="_blank" rel="noopener noreferrer">
-            在 GitHub 查看<span class="sr-only">（新窗口打开）</span>
+            GitHub 仓库<span class="sr-only">（新窗口打开）</span>
           </a>
         </div>
       </div>
 
       <div class="hero-foot enter" style="--delay:.54s">
         <ul class="factline">
-          <li><strong>05</strong><span>个项目</span></li>
-          <li><strong>04</strong><span>个在线演示</span></li>
-          <li><strong>100%</strong><span>可以自托管</span></li>
+          <li><strong data-project-count>5</strong><span>个项目</span></li>
+          <li><strong data-demo-count>5</strong><span>个在线入口</span></li>
+          <li><strong>全部</strong><span>可以自己部署</span></li>
         </ul>
         <a class="scroll-cue" href="#projects" aria-label="向下浏览项目">
           <span>向下</span>
@@ -134,11 +128,10 @@
 
     <section class="section projects" id="projects" aria-labelledby="projects-title">
       <header class="section-head reveal">
-        <p class="section-kicker">作品</p>
-        <h2 id="projects-title">五件趁手的工具。</h2>
+        <p class="section-kicker">项目</p>
+        <h2 id="projects-title">现在在做的项目。</h2>
         <p class="section-intro">
-          都在真实使用中长大。每一件都可以拉到自己的服务器上，
-          交给日常，而不是交给别人。
+          都是能自己部署的工具，代码和在线入口都在下面。这个列表还会继续加。
         </p>
       </header>
 
@@ -157,13 +150,13 @@
               <h3><a href="https://github.com/qingyu-org/Pansou" target="_blank" rel="noopener noreferrer">清羽盘搜<span class="sr-only">（新窗口打开）</span></a></h3>
               <span class="project-latin" lang="en">Pansou</span>
             </div>
-            <p class="project-desc">可以自己运营的网盘搜索站。搜索聚合、配额、审计与上游同步，都收在同一个仓库里。</p>
+            <p class="project-desc">可以自己运营的网盘搜索站。搜索聚合、配额、审计和上游同步都在一个仓库里。</p>
             <p class="project-stack">Go, Vue 3, SQLite</p>
           </div>
           <div class="project-aside">
             <span class="project-domain">搜索</span>
             <p class="project-links">
-              <a href="https://so.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <a data-demo href="https://so.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
               <a href="https://github.com/qingyu-org/Pansou" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
             </p>
           </div>
@@ -182,13 +175,13 @@
               <h3><a href="https://github.com/qingyu-org/Album" target="_blank" rel="noopener noreferrer">清羽相册<span class="sr-only">（新窗口打开）</span></a></h3>
               <span class="project-latin" lang="en">Memora</span>
             </div>
-            <p class="project-desc">把照片放回自己的硬盘。瀑布流、相册与地图，都由你部署，也由你保管。</p>
+            <p class="project-desc">自托管相册。支持瀑布流、相册和地图视图，存储可选本地磁盘、S3 或 OpenList。</p>
             <p class="project-stack">Go, Nuxt, SQLite</p>
           </div>
           <div class="project-aside">
             <span class="project-domain">相册</span>
             <p class="project-links">
-              <a href="https://xc.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <a data-demo href="https://xc.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
               <a href="https://github.com/qingyu-org/Album" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
             </p>
           </div>
@@ -209,12 +202,13 @@
               <h3><a href="https://github.com/qingyu-org/Commits" target="_blank" rel="noopener noreferrer">清羽评论<span class="sr-only">（新窗口打开）</span></a></h3>
               <span class="project-latin" lang="en">Commits</span>
             </div>
-            <p class="project-desc">Artalk 的自维护分支。为博客准备一套跟得上自己节奏的评论系统，管理台与部署方式完整保留。</p>
+            <p class="project-desc">Artalk 的自维护分支，包含后台和 Docker 部署。现在跑在 LiuShen 的博客上。</p>
             <p class="project-stack">Go, JavaScript, Docker</p>
           </div>
           <div class="project-aside">
             <span class="project-domain">评论</span>
             <p class="project-links">
+              <a data-demo href="https://blog.liushen.fun/" target="_blank" rel="noopener noreferrer">博客体验<span class="sr-only">（新窗口打开）</span></a>
               <a href="https://github.com/qingyu-org/Commits" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
             </p>
           </div>
@@ -233,13 +227,13 @@
               <h3><a href="https://github.com/qingyu-org/Gist" target="_blank" rel="noopener noreferrer">清羽片段<span class="sr-only">（新窗口打开）</span></a></h3>
               <span class="project-latin" lang="en">Gist</span>
             </div>
-            <p class="project-desc">每个片段都是一个 Git 仓库。浏览器里随手写，也可以 clone 下来，用惯用的编辑器继续改。</p>
+            <p class="project-desc">每个片段都是一个 Git 仓库。可以在网页里写，也可以 clone 到本地编辑。</p>
             <p class="project-stack">Go, Git, SQLite</p>
           </div>
           <div class="project-aside">
             <span class="project-domain">片段</span>
             <p class="project-links">
-              <a href="https://gist.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <a data-demo href="https://gist.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
               <a href="https://github.com/qingyu-org/Gist" target="_blank" rel="noopener noreferrer">源码<span class="sr-only">（新窗口打开）</span></a>
             </p>
           </div>
@@ -258,13 +252,14 @@
               <h3><a href="https://auth.liushen.fun" target="_blank" rel="noopener noreferrer">清羽通行证<span class="sr-only">（新窗口打开）</span></a></h3>
               <span class="project-latin" lang="en">Auth</span>
             </div>
-            <p class="project-desc">单站点部署的 OAuth 2.0 / OIDC 单点登录。账户、设备、应用与权限，收在一处。</p>
+            <p class="project-desc">单站点部署的 OAuth 2.0 / OIDC 单点登录。账户、设备、应用和权限都在一处管理。</p>
             <p class="project-stack">Go, MySQL, OIDC</p>
           </div>
           <div class="project-aside">
             <span class="project-domain">身份</span>
             <p class="project-links">
-              <a href="https://auth.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <a data-demo href="https://auth.liushen.fun" target="_blank" rel="noopener noreferrer">在线演示<span class="sr-only">（新窗口打开）</span></a>
+              <span class="project-note">打磨中，暂不开源</span>
             </p>
           </div>
         </article>
@@ -280,11 +275,9 @@
     <section class="section principles" id="principles" aria-labelledby="principles-title">
       <div class="principles-inner">
         <header class="section-head reveal">
-          <p class="section-kicker">做法</p>
-          <h2 id="principles-title">先让它能被拿走。</h2>
-          <p class="section-intro">
-            这三点决定了每个项目的边界：能自己跑，能看懂，也能体面地离开。
-          </p>
+          <p class="section-kicker">原则</p>
+          <h2 id="principles-title">三个实际的标准。</h2>
+          <p class="section-intro">选型和写代码时，会照着这三条来。</p>
         </header>
 
         <div class="principle-grid">
@@ -294,8 +287,8 @@
               <rect x="3.5" y="13" width="17" height="6.5" rx="1.6"/>
               <path d="M7 7.8h.01M7 16.2h.01"/>
             </svg>
-            <h3>自托管</h3>
-            <p>默认把数据和服务放在自己的机器上。部署是一份能力，不是一份许可。</p>
+            <h3>能自己部署</h3>
+            <p>默认提供 Docker 部署。数据和账号放在自己的服务器上，不用依赖托管服务。</p>
           </div>
           <div class="principle reveal" style="--reveal-delay:.08s">
             <svg class="principle-mark" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -303,16 +296,16 @@
               <path d="M14.5 5.5c2.4-2.4 4.8-2 5 .2.2 2.2-2.7 4.6-6 5.3-2.5.5-4.3-.3-4.3-.3s.4-1.9 2.1-3.6Z"/>
               <path d="M12.2 12.3 9.8 9.9"/>
             </svg>
-            <h3>克制</h3>
-            <p>只做日常真正会用到的部分，把剩下的空间留给内容与呼吸。</p>
+            <h3>不堆功能</h3>
+            <p>先把常用路径做顺，不加用不到的开关。功能少一点，维护也轻一点。</p>
           </div>
           <div class="principle reveal" style="--reveal-delay:.16s">
             <svg class="principle-mark" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M14.5 3.5h4a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 1-1.5 1.5h-4"/>
               <path d="M10 16.5 15.5 12 10 7.5M15 12H3.5"/>
             </svg>
-            <h3>可离开</h3>
-            <p>格式开放，导出完整。喜欢就留下，不喜欢可以随时带走。</p>
+            <h3>随时能迁走</h3>
+            <p>用开放格式存数据，提供导出。迁移时不用从头再来，也不用求人。</p>
           </div>
         </div>
       </div>
@@ -324,8 +317,8 @@
           <p class="about-seal" aria-hidden="true">清羽</p>
           <h2 id="about-title">QingYu<span class="about-alt">（清羽 / 清羽飞扬）</span></h2>
           <p class="about-copy">
-            一个由 LiuShen 发起的独立开源软件品牌。我们相信好工具应该安静、耐用，
-            并且最终属于使用它的人。
+            由 LiuShen 发起的独立软件项目。主要写 Go，也做前端。
+            项目以自托管工具为主，能开源的都在 GitHub 上。
           </p>
         </div>
         <div class="about-links reveal" style="--reveal-delay:.08s">
@@ -342,15 +335,15 @@
         <p>© 2026 清羽。各项目遵循其仓库内的许可证。</p>
         <nav class="footer-nav" aria-label="页脚导航">
           <a href="#projects">项目</a>
-          <a href="#principles">做法</a>
+          <a href="#principles">原则</a>
           <a href="#about">关于</a>
         </nav>
-        <p class="footer-note">纯 HTML、CSS 与 JavaScript，无第三方依赖。</p>
+        <p class="footer-note">页面是手写的 HTML、CSS 和 JavaScript，没有框架。</p>
         <a class="text-link back-top" href="#top">回到顶部</a>
       </footer>
     </section>
   </main>
 
-  <script src="assets/app.js?v=20261123e" defer></script>
+  <script src="assets/app.js?v=20261124a" defer></script>
 </body>
 </html>

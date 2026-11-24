@@ -27,10 +27,10 @@ Pages 的 Source 需要设为 **GitHub Actions**。修改 `index.html` 或 `asse
 
 ## 修改内容
 
-项目条目是 `index.html` 中手写的静态内容，没有外部数据源；增删项目时同步更新：
+项目条目是 `index.html` 中手写的静态内容，没有外部数据源。新增项目时：
 
-1. `index.html` 的 `.project-list`
-2. 首屏 `factline` 中的项目数量
-3. `profile/README.md` 的作品表
+1. 在 `index.html` 的 `.project-list` 里复制一个 `<article class="project">`，填入名称、说明、技术栈和链接。在线入口记得加 `data-demo`，首屏数量会自动更新。
+2. 在 `profile/README.md` 的项目表里补一行。
 
+首屏的项目数和在线入口数由 `assets/app.js` 按页面内容计算，不写死。
 样式变量集中在 `assets/style.css` 顶部的 `:root` 与 `:root[data-theme="dark"]`。

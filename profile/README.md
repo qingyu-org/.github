@@ -2,36 +2,36 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="banner-dark.svg">
-  <img src="banner-light.svg" alt="清羽 QingYu — 有用，优雅，且可以自己拥有。" width="100%">
+  <img src="banner-light.svg" alt="清羽 QingYu — 自托管工具" width="100%">
 </picture>
 
 # 清羽 · QingYu
 
-**有用，优雅，且可以自己拥有。**
+**自己部署，数据留在自己手里。**
 
-一个自托管的开源软件品牌，由 LiuShen 发起。
+由 LiuShen 发起的独立软件项目，主要用 Go 写。下面是目前在维护的东西，之后会继续加。
 
-[项目展示页](https://qingyu-org.github.io/.github/) · [GitHub](https://github.com/qingyu-org) · [组织说明](https://github.com/qingyu-org/.github)
+[项目展示页](https://qingyu-org.github.io/.github/) · [GitHub](https://github.com/qingyu-org)
 
 </div>
 
-## 作品
+## 项目
 
-| 项目 | 它是什么 | 在线使用 |
+| 项目 | 做什么 | 在线入口 |
 | :--- | :--- | :--- |
-| **[清羽盘搜](https://github.com/qingyu-org/Pansou)** · Pansou | 可以自己运营的网盘搜索站。搜索聚合、配额、审计与上游同步，都在同一个仓库里。 | [so.liushen.fun](https://so.liushen.fun) |
-| **[清羽相册](https://github.com/qingyu-org/Album)** · Memora | 把照片放回自己的硬盘：瀑布流、相册与地图，都由你部署。 | [xc.liushen.fun](https://xc.liushen.fun) |
-| **[清羽评论](https://github.com/qingyu-org/Commits)** · Commits | Artalk 的自维护分支，为博客准备一套跟得上自己节奏的评论系统。 | [源码](https://github.com/qingyu-org/Commits) |
-| **[清羽片段](https://github.com/qingyu-org/Gist)** · Gist | 每个片段都是一个 Git 仓库。浏览器里随手写，也可以 clone 下来继续改。 | [gist.liushen.fun](https://gist.liushen.fun) |
-| **清羽通行证** · Auth | 单站点部署的 OAuth 2.0 / OIDC 单点登录，账户、设备与权限收在一处。 | [auth.liushen.fun](https://auth.liushen.fun) |
+| **[清羽盘搜](https://github.com/qingyu-org/Pansou)** · Pansou | 可以自己运营的网盘搜索站，搜索聚合、配额和审计都在一个仓库里。 | [so.liushen.fun](https://so.liushen.fun) |
+| **[清羽相册](https://github.com/qingyu-org/Album)** · Memora | 自托管相册，支持瀑布流、相册和地图视图。 | [xc.liushen.fun](https://xc.liushen.fun) |
+| **[清羽评论](https://github.com/qingyu-org/Commits)** · Commits | Artalk 的自维护分支，现在跑在 LiuShen 的博客上。 | [博客体验](https://blog.liushen.fun/) |
+| **[清羽片段](https://github.com/qingyu-org/Gist)** · Gist | 每个片段都是一个 Git 仓库，可以在网页里写，也可以 clone 到本地。 | [gist.liushen.fun](https://gist.liushen.fun) |
+| **清羽通行证** · Auth | 单站点部署的 OAuth 2.0 / OIDC 单点登录。打磨中，暂不开源。 | [auth.liushen.fun](https://auth.liushen.fun) |
 
-## 做法
+## 原则
 
-**自托管。** 默认把数据和服务放在自己的机器上。部署是一份能力，不是一份许可。
+**能自己部署。** 默认提供 Docker 部署，数据和账号放在自己的服务器上。
 
-**克制。** 只做日常真正会用到的部分，把剩下的空间留给内容与呼吸。
+**不堆功能。** 先把常用路径做顺，不加用不到的开关。
 
-**可离开。** 格式开放，导出完整。喜欢就留下，不喜欢可以随时带走。
+**随时能迁走。** 用开放格式存数据，提供导出。
 
 ---
 

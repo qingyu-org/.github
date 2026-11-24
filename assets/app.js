@@ -107,6 +107,15 @@
     }
   }
 
+  /* ---------- live counts ---------- */
+
+  var projects = document.querySelectorAll('.project');
+  var projectCount = document.querySelector('[data-project-count]');
+  var demoCount = document.querySelector('[data-demo-count]');
+
+  if (projectCount) projectCount.textContent = String(projects.length);
+  if (demoCount) demoCount.textContent = String(document.querySelectorAll('[data-demo]').length);
+
   /* ---------- the tide ---------- */
 
   var canvas = document.querySelector('[data-tide]');
